@@ -1,0 +1,21 @@
+# Drone Drop Detection System Dependencies
+
+# Computer Vision
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Deep Learning
+torch>=2.0.0
+ultralytics>=8.0.0  # YOLOv8
+
+# Optional but recommended
+pillow>=10.0.0
+scipy>=1.10.0
+
+# Development
+# python>=3.10
+
+# Notes:
+# - torch can be CUDA or CPU version
+# - For GPU acceleration, install: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+# - ultralytics includes YOLOv8 implementation
