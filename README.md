@@ -101,6 +101,14 @@ pip install -r requirements.txt
 python -c "import cv2; import torch; from ultralytics import YOLO; print('✓ All imports successful')"
 ```
 
+> Windows users can run the bundled installer script from the project root:
+>
+> ```bat
+> install.bat rtsp://192.168.1.1:7070/webcam
+> ```
+>
+> This creates the virtual environment, installs dependencies, updates `config/config.py` with your drone RTSP URL, and launches `main.py`.
+
 ### 5. Run Tests (Optional)
 
 ```bash

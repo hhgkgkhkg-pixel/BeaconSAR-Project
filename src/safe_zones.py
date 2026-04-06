@@ -288,6 +288,6 @@ class SafeZoneAnalyzer:
         self.safety_grid = np.ones((self.grid_height, self.grid_width), dtype=np.float32)
 
 
-def create_safe_zone_analyzer(frame_width: int, frame_height: int) -> SafeZoneAnalyzer:
+def create_safe_zone_analyzer(frame_width: int, frame_height: int, grid_cell_size: int = 50) -> SafeZoneAnalyzer:
     """Factory function to create safe zone analyzer."""
-    return SafeZoneAnalyzer(frame_width, frame_height)
+    return SafeZoneAnalyzer(frame_width, frame_height, grid_cell_size)
