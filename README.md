@@ -25,17 +25,26 @@ An intelligent Python application that uses YOLOv8 object detection to analyze l
 ## System Architecture 🏗️
 
 ```
-drone_drop_detection/
+.
 ├── main.py                 # Entry point
 ├── config/
+│   ├── __init__.py
 │   └── config.py          # Configuration parameters
 ├── src/
+│   ├── __init__.py
 │   ├── camera.py          # RTSP video capture
 │   ├── detection.py       # YOLOv8 object detection
 │   ├── safe_zones.py      # Safe zone analysis logic
 │   └── visualization.py   # Frame annotation & display
 ├── output/                # Video output directory
-└── requirements.txt       # Python dependencies
+├── docs/                  # Project documentation
+├── notebooks/             # Jupyter notebooks for experimentation
+├── test_system.py         # System tests
+├── utils.py               # Utility functions
+├── requirements.txt       # Python dependencies
+├── setup.py               # Package setup
+├── Dockerfile             # Docker configuration
+└── README.md              # This file
 ```
 
 ## Requirements 📋
@@ -52,10 +61,11 @@ drone_drop_detection/
 
 ## Installation 🔧
 
-### 1. Clone/Extract Project
+### 1. Clone Repository
 
 ```bash
-cd drone_drop_detection
+git clone https://github.com/hhgkgkhkg-pixel/BeaconSAR-Project.git
+cd BeaconSAR-Project
 ```
 
 ### 2. Create Python Virtual Environment (Recommended)
@@ -88,7 +98,17 @@ pip install -r requirements.txt
 ### 4. Verify Installation
 
 ```bash
-python -c "import cv2; import torch; import ultralytics; print('✓ All imports successful')"
+python -c "import cv2; import torch; from ultralytics import YOLO; print('✓ All imports successful')"
+```
+
+### 5. Run Tests (Optional)
+
+```bash
+# Quick sanity tests
+python test_system.py --quick
+
+# Full test suite
+python test_system.py --full
 ```
 
 ## Quick Start 🚀
@@ -134,6 +154,17 @@ While running (display mode):
 | `q` | Quit application |
 | `s` | Save current frame as JPEG |
 | `p` | Pause/Resume video |
+
+## Documentation 📖
+
+Additional documentation is available in the `docs/` folder:
+
+- [00_READ_ME_FIRST.txt](docs/00_READ_ME_FIRST.txt) - Quick start guide
+- [QUICKSTART.md](docs/QUICKSTART.md) - Quick reference
+- [PROJECT_SUMMARY.md](docs/PROJECT_SUMMARY.md) - Project overview
+- [DELIVERY.md](docs/DELIVERY.md) - Delivery checklist
+- [FILE_STRUCTURE.md](docs/FILE_STRUCTURE.md) - Detailed file structure
+- [START_HERE.txt](docs/START_HERE.txt) - Getting started
 
 ## Configuration 🎛️
 
